@@ -1,16 +1,41 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px;
-    border-bottom: 1px solid black;
-    padding: 10px 30px;
-    margin-bottom:80px;
+header {
+  display: flex;
+  flex-direction: column;      /* Coloca el logo y el título en columna */
+  align-items: center;         /* Centra horizontalmente */
+  justify-content: center;     /* Centra verticalmente */
+  margin: 0px;
+  border-bottom: 1px solid black;
+  padding: 10px 30px;
+  margin-bottom: 0px;
+  background-image: url(./imagenes/banner.png);
+}
+
+.contenedorNav{
+  display: flex;
+  justify-content: center;     /* Centra el contenido horizontalmente */
+  align-items: center;         /* Centra el contenido verticalmente */
+}
+
+.logo{
+  width: 20%;
+}
+
+.logo-titulo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1{
   font-family: "Poppins", serif;
     font-weight: 600;
     font-style: normal;
+}
+
+.tituloLink{
+  text-decoration: none;
+  color: white;
 }
 
 ul{
@@ -27,118 +52,28 @@ li{
     font-style: normal;
 }
 
-a{
-  text-decoration: none;
-  color: white;
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del texto */
+  font-family: "Poppins", serif; /* Fuente coherente con el diseño */
+  font-weight: 500; /* Grosor de la fuente */
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
-/* Google Fonts */
-.poppins-thin {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente al pasar el mouse */
+  color: #ffcc00; /* Cambio de color del texto al pasar el mouse */
+}
+
+.logo-img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 10px;
+}
+
+.titulo{
   
-  .poppins-extralight {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .poppins-light {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .t{
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-extrabold {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .poppins-black {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .poppins-thin-italic {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .poppins-extralight-italic {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .poppins-light-italic {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .poppins-bold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .poppins-extrabold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-  .poppins-black-italic {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-  
+}

@@ -1,0 +1,11 @@
+h2{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    margin: 20px  0px;
+}
+

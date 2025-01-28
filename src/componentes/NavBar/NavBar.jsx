@@ -1,14 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-import CarWidget from '../CarWidget/CarWidget' 
+import CarWidget from '../CarWidget/CarWidget';
+import logo from './imagenes/logo.png'; // Asegúrate de que la ruta sea correcta
 
 const NavBar = () => {
   return (
     <header>
-      <Link to="/">
-        <h1>FC Remeras Importadas</h1>
-      </Link>
+      <div className="contenedorNav">
+        <Link className='tituloLink' to="/">
+          <div className="logo-titulo">
+            <img src={logo} alt="logo" className="logo" />
+            <h1 className="titulo">FC Remeras Importadas</h1>
+          </div>
+        </Link>
+      </div>
       <nav>
         <ul>
           <li>
@@ -28,7 +34,7 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-        <CarWidget />
+      <CarWidget />
     </header>
   );
 };

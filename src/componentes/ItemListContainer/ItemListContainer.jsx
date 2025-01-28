@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCategoria, getProductos } from '../../asyncmock';
 import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -20,10 +21,16 @@ const ItemListContainer = () => {
   }, [categoria]);
 
   return (
-    <div>
-      <h2>{categoria ? `Productos de ${categoria}` : 'Todos los productos'}</h2>
-      <ItemList productos={productos} />
-    </div>
+    <>
+      <div className='container'>
+        <h2>
+          {categoria ? `Productos de ${categoria}` : "Todos los productos"}
+        </h2>
+      </div>
+      <div className="">
+        <ItemList productos={productos} />
+      </div>
+    </>
   );
 };
 

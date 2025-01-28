@@ -1,0 +1,53 @@
+.producto {
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    max-width: 300px; /* Ancho máximo */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Efecto hover para el contenedor del producto */
+.producto:hover {
+    transform: translateY(-5px); /* Levantar ligeramente el producto */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para el título del producto */
+.producto h2 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333333; /* Color de texto oscuro */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para el precio y el ID */
+.producto h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #555555; /* Color de texto gris oscuro */
+    margin: 5px 0; /* Espaciado vertical */
+}
+
+/* Estilos para la imagen del producto */
+.producto img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilos para la descripción del producto */
+.producto p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777; /* Color de texto gris */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin-top: 10px; /* Espaciado superior */
+}

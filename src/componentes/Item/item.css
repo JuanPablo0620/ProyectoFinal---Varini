@@ -1,37 +1,73 @@
-.articulo img{
-    width: 200px;
+.articulo img {
+    width: 240px;
     transition: transform 0.3s ease;
 }
 
-.articulo-img:hover{
+.articulo-img:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
 
-
-.articulo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.articulo {
     border: 1px solid black;
     padding: 3rem 1rem;
-    width: 200px;
+    width: 300px;
     border-radius: 4px;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     background-color: rgba(255, 255, 255, 0.432);
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.articulo :hover{
+.articulo:hover {
     cursor: pointer;
 }
 
-span{
+span {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-style: normal;
-    color:black;
+    color: white;
+    font-size:18px;
+    margin-bottom: 20px;
+    margin-top: 12px;
 }
 
-h3{
-    color: black;
+h3 {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #121420;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button a:hover {
+    text-decoration: none;
 }
