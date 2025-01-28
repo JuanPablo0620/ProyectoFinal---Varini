@@ -1,0 +1,37 @@
+.articulo img{
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.articulo-img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.articulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 3rem 1rem;
+    width: 200px;
+    border-radius: 4px;
+    margin-bottom:1rem;
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
+.articulo :hover{
+    cursor: pointer;
+}
+
+span{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color:black;
+}
+
+h3{
+    color: black;
+}

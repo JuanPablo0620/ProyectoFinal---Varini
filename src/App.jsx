@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import NavBar from './componentes/NavBar/NavBar.jsx'
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx'
+import React from 'react';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer.jsx';
+import NavBar from './componentes/NavBar/NavBar.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <NavBar/>
-      <ItemListContainer nota = "Esta es una tienda virtual de remeras de futbol importadas :)"/>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
-    )
+  );
 }
 
-export default App
+export default App;

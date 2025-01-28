@@ -1,24 +1,36 @@
-import React from 'react'
-import "./NavBar.css"
-import CarWidget from '../CarWidget/CarWidget'  
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
+import CarWidget from '../CarWidget/CarWidget' 
 
-const navbar = () => {
-
+const NavBar = () => {
   return (
     <header>
-      <h1>FC Remeras Importadas</h1>
+      <Link to="/">
+        <h1>FC Remeras Importadas</h1>
+      </Link>
       <nav>
         <ul>
-          <li><a href="">Premier league</a></li>
-          <li><a href="">La Liga</a></li>
-          <li><a href="">Serie A</a></li>
-          <li><a href="">Bundesliga</a></li>
-          <li><a href="">Selecciones</a></li>
+          <li>
+            <Link to="/categoria/PremierLeague">Premier League</Link>
+          </li>
+          <li>
+            <Link to="/categoria/LaLiga">La Liga</Link>
+          </li>
+          <li>
+            <Link to="/categoria/SerieA">Serie A</Link>
+          </li>
+          <li>
+            <Link to="/categoria/Bundesliga">Bundesliga</Link>
+          </li>
+          <li>
+            <Link to="/categoria/Selecciones">Selecciones</Link>
+          </li>
         </ul>
       </nav>
-      <CarWidget/>
+        <CarWidget />
     </header>
   );
-}
+};
 
-export default navbar
+export default NavBar;
