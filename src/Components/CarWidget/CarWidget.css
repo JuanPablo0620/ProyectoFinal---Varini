@@ -1,0 +1,19 @@
+.imgCarrito{
+    width: auto;
+    height: 60px;
+}
+
+.link-contador{
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:20px;
+}
+.contador strong{
+    text-decoration: none;
+}

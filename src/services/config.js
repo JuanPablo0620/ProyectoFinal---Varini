@@ -1,24 +1,44 @@
-import dortmundImg from './img/dortmund.png';
-import milanImg from './img/milan.png';
-import liverpoolImg from './img/liverpool.png';
-import realMadridImg from './img/real_madrid.png';
-import bayerLeverkusenImg from './img/bayer_leverkusen.png';
-import napoliImg from './img/napoli.png';
-import atleticoMadridImg from './img/atletico_madrid.png';
-import romaImg from './img/roma.png';
-import barcelonaImg from './img/barcelona.png';
-import bolognaImg from './img/bologna.png';
-import brightonImg from './img/brighton.png';
-import dinamarcaImg from './img/dinamarca.png';
-import españaImg from './img/españa.png';
-import franciaImg from './img/francia.png';
-import juventusImg from './img/juventus.png';
-import leipzigImg from './img/leipzig.png';
-import man_cityImg from './img/man_city.png';
-import tottenhamImg from './img/tottenham.png';
-import bayern_munichImg from './img/bayern_munich.png';
-import inter_milanImg from './img/inter.png';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBXUQcUqPszjkKw27pAk7qyc9CUmYEvzeQ",
+  authDomain: "proyectofinal---coderhouse.firebaseapp.com",
+  projectId: "proyectofinal---coderhouse",
+  storageBucket: "proyectofinal---coderhouse.firebasestorage.app",
+  messagingSenderId: "165068373509",
+  appId: "1:165068373509:web:b345ff1db30e628bdee66c"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
+
+/* import dortmundImg from '../img/dortmund.png';
+import milanImg from '../img/milan.png';
+import liverpoolImg from '../img/liverpool.png';
+import realMadridImg from '../img/real_madrid.png';
+import bayerLeverkusenImg from '../img/bayer_leverkusen.png';
+import napoliImg from '../img/napoli.png';
+import atleticoMadridImg from '../img/atletico_madrid.png';
+import romaImg from '../img/roma.png';
+import barcelonaImg from '../img/barcelona.png';
+import bolognaImg from '../img/bologna.png';
+import brightonImg from '../img/brighton.png';
+import dinamarcaImg from '../img/dinamarca.png';
+import españaImg from '../img/españa.png';
+import franciaImg from '../img/francia.png';
+import juventusImg from '../img/juventus.png';
+import leipzigImg from '../img/leipzig.png';
+import man_cityImg from '../img/man_city.png';
+import tottenhamImg from '../img/tottenham.png';
+import bayern_munichImg from '../img/bayern_munich.png';
+import inter_milanImg from '../img/inter.png';
+
+
+// Subir los productos automaticamente
 const misProductos = [
     {id: 1, nombre: "Remera de Borussia Dortmund", precio: 60.000, img: dortmundImg, categoria: "Bundesliga", descripcion: "Camiseta del Borussia Dortmund, temporada 2018-2019. Presenta los colores amarillo y negro con detalles en gris, celebrando el centenario del estadio Signal Iduna Park. Tecnología de control de temperatura."},
     {id: 2, nombre: "Remera de AC Milan", precio: 60.000, img: milanImg, categoria: "Seriea", descripcion: "Camiseta del AC Milan, año 2006-2007. Presenta los colores rojo y negro con rayas verticales, celebrando la victoria en la Champions League. Tecnología de secado rápido."  },
@@ -41,39 +61,27 @@ const misProductos = [
     {id: 19, nombre: "Remera de Tottenham", precio: 60.000, img: tottenhamImg, categoria: "Premierleague", descripcion: "Camiseta del Tottenham Hotspur, temporada 2018-2019. Presenta los colores blanco y azul, celebrando la llegada del equipo a la final de la Champions League. Tecnología de control de temperatura."},
     {id: 20, nombre: "Remera de Inter de Milan", precio: 60.000, img: inter_milanImg, categoria: "Seriea", descripcion: "Remera del Inter de Milán, temporada 2009-2010. Diseño en azul y negro con rayas verticales, conmemorando la temporada en la que el equipo ganó la Champions League. Tejido elástico para mayor movilidad."}
 
-];
+]
 
-export const getProductos = () => {
-    return new Promise((resolve) =>{
-        setTimeout(()=>{
-            resolve(misProductos);
-        });
+import {collection, doc, writeBatch } from 'firebase/firestore';
+
+const subirProductos = async () => {
+    const batch = writeBatch(db); 
+    const productosRef = collection(db, "productos"); //la coleccion creada en la db
+    
+    //recorrer el array de productos
+    misProductos.forEach((producto) => {
+        const nuevoDoc = doc(productosRef); //crear un nuevo documento con un ID automático
+        batch.set(nuevoDoc, producto); //agrega la operacion de escritura al batch
     });
+
+    //ejectua el batch
+    try {
+        await batch.commit();
+        console.log("productos subidos exitosamente");
+    } catch (error){
+        console.log("error subiendo productos:", error);
+    }
 };
 
-export const getUnProducto = (id) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const producto = misProductos.find(item => item.id === parseInt(id));
-            resolve(producto);
-        });
-    }, 1500);
-};
-
-export const getCategoria = (categoria) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const productosFiltrados = misProductos.filter(item => item.categoria.toLowerCase() === categoria.toLowerCase());
-            resolve(productosFiltrados);
-        }, 1500);
-    });
-};
-
-export const getDescripcion = (descripcion) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const descripcionProducto = misProductos.find(item => item.descripcion === descripcion);
-            resolve(descripcionProducto);
-        }, 1500);
-    });
-};
+subirProductos() */
