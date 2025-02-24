@@ -1,4 +1,4 @@
-import dortmundImg from './img/dortmund.png';
+/* import dortmundImg from './img/dortmund.png';
 import milanImg from './img/milan.png';
 import liverpoolImg from './img/liverpool.png';
 import realMadridImg from './img/real_madrid.png';
@@ -76,4 +76,4 @@ export const getDescripcion = (descripcion) => {
             resolve(descripcionProducto);
         }, 1500);
     });
-};
+}; */
