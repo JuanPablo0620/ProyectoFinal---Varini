@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductos } from '../../asyncmock';
+/* import { getProductos } from '../../asyncmock'; */
 import ItemList from '../ItemList/ItemList';
 
 const SearchResult = () => {
-  const [productos, setProductos] = useState([]);
+  /* const [productos, setProductos] = useState([]); */
   const { searchTerm } = useParams();
 
-  useEffect(() => {
+  /* useEffect(() => {
     getProductos()
       .then(respuesta => {
         const resultados = respuesta.filter(producto =>
@@ -16,7 +16,7 @@ const SearchResult = () => {
         setProductos(resultados);
       })
       .catch(error => console.log(error));
-  }, [searchTerm]);
+  }, [searchTerm]); */
 
   return (
     <div>
